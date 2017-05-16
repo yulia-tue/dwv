@@ -496,7 +496,8 @@ dwv.dicom.DataWriter.prototype.writeDataElement = function (element, byteOffset)
  * @return {Boolean} True if a supported syntax.
  */
 dwv.dicom.isWriteSupportedTransferSyntax = function (syntax) {
-    return syntax === "1.2.840.10008.1.2.1"; // Explicit VR - Little Endian
+    return syntax === "1.2.840.10008.1.2.1" // Explicit VR - Little Endian
+        || syntax === "1.2.840.10008.1.2.4.91" ; // JPEG 2000 Image Compression
 };
 
 /**
